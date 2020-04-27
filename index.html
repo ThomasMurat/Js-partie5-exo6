@@ -10,27 +10,23 @@
             <div class="form-group">
                 <label for="name">Nom:</label>
                 <input onfocusin="fieldFocusIn(this)" onfocusout="fieldFocusOut(this)" class="form-control" type="text" id="name" placeholder="Nom (16 caractères max)" required />
-                <p id="nameCheck"></p>
             </div>
             <div class="form-group">
                 <label for="mail">Mail</label>
                 <input onfocusin="fieldFocusIn(this)" onfocusout="fieldFocusOut(this)" class="form-control" type="email" id="mail" placeholder="e-mail" required />
-                <p id="mailCheck"></p>
             </div>
             <div class="form-group">
                 <label for="age">Âge:</label>
                 <input onfocusin="fieldFocusIn(this)" onfocusout="fieldFocusOut(this)" class="form-control" type="number" id="age" placeholder="Âge" required />
-                <p id="ageCheck"></p>
             </div>
-            <button type="submit" class="btn btn-primary">Valider</button>
-            
+            <button type="button" class="btn btn-primary">Valider</button>
         </form>
         <script>
             function fieldFocusIn(x) {
-                x.style.borderColor = "black"
+                x.setAttribute('class', 'form-control border border-dark');
             }
             function fieldFocusOut(x) {
-                x.style.borderStyle = "none"
+                x.setAttribute('class', 'form-control');
             }
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
